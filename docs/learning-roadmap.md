@@ -1,14 +1,14 @@
 # 📋 Agent 开发学习路线 · 求职定制版
 
 > **你的画像**：每天 2h · 求职/转行 · 完全零基础
-> **总投入**：15 周 × 5 天 × 2h = 150h（不含周末自由复习）
+> **总投入**：17 周 × 5 天 × 2h = 170h（不含周末自由复习）
 > **方法论**：做出什么 > 学过什么（源自 AgentGuide）
 >
 > **v2 变更**：阶段 1 从 W2-3 扩到 W2-4（+1 周），新增 LeetCode + Pythonic 训练 + LangChain 源码阅读
 
 ---
 
-## 🗺 15 周全景图
+## 🗺 17 周全景图
 
 ```
 Week  1 ━━━ 阶段 0：定方向（不写代码）
@@ -18,19 +18,19 @@ Week 6-7 ━━ 阶段 3：RAG 完整链路
 Week 8-9 ━━ 阶段 4：Agent 框架（LangGraph 重点）
 Week 10-11 ━ 阶段 5：多 Agent + MCP + 工程化
 Week 12-13 ━ 阶段 6：2 个简历级项目
-Week 14-15 ━ 阶段 7：求职冲刺
+Week 14-16 ━ 阶段 7：求职冲刺（3 周）
 ```
 
 | 阶段 | 周 | 总时长 | 核心产出 | 阶段验收标准 |
 |---|---|---|---|---|
 | 0 | W1 | 10h | 1 页概念笔记 + 环境就绪 | 能复述 5 级能力模型 + 装好 Python/VS Code/API Key |
 | 1 | W2-4 | 60h | 11 练习 + 3 项目 + LeetCode 20 题 | 能读懂 LangChain 源码 80% + Pythonic |
-| 2 | W6 | 14h | 200 行最小 Agent + 20 eval | clone-and-run + 简历 bullet 已写 |
-| 3 | W7-7 | 40h | 端到端 RAG 系统 | PDF 问答 RAG + FastAPI + Docker |
-| 4 | W9-9 | 40h | LangGraph 重写 + trace | 状态可视化 + checkpoint 恢复 |
-| 5 | W11-11 | 40h | 多 Agent + MCP + 性能 | 3 个 Agent 协作 + 自建 MCP server |
-| 6 | W13-13 | 40h | 2 个简历级项目 | 上线可演示 + 量化指标 |
-| 7 | W15-15 | 28h | 简历 + 面试冲刺 | 投递 30+ 简历 + 5 次模拟面试 |
+| 2 | W5 | 14h | 200 行最小 Agent + 20 eval | clone-and-run + 简历 bullet 已写 |
+| 3 | W6-7 | 40h | 端到端 RAG 系统 | PDF 问答 RAG + FastAPI + Docker |
+| 4 | W8-9 | 40h | LangGraph 重写 + trace | 状态可视化 + checkpoint 恢复 |
+| 5 | W10-11 | 40h | 多 Agent + MCP + 性能 | 3 个 Agent 协作 + 自建 MCP server |
+| 6 | W12-13 | 40h | 2 个简历级项目 | 上线可演示 + 量化指标 |
+| 7 | W14-16 | 42h | 简历 + 投递 + 模拟面试 | 投递 30+ + 项目讲解训练 + 1 Offer |
 
 ---
 
@@ -196,7 +196,7 @@ Week 14-15 ━ 阶段 7：求职冲刺
 
 ---
 
-## 📦 阶段 1 强化 · 🐍 Python 实战（第 4 周 · 20h）🆕
+### W4 · 阶段 1 强化周 · 🐍 Python 实战（第 4 周 · 20h）🆕
 
 > **v2 新增**：在进入 Agent 之前，先用 1 周时间强化 Python 实战能力，确保求职算法题 + 源码阅读都过关。
 > 详细每日任务见 [`todos/01-stage-1/W4-D1-mon.md`](../todos/01-stage-1/W4-D1-mon.md)
@@ -233,40 +233,40 @@ Week 14-15 ━ 阶段 7：求职冲刺
 > **整个路线的灵魂**——7 天内产出 1 个可演示、可评估、有 trace 的最小 Agent。
 > 详细任务见 [`docs/first-7-days-checklist.md`](first-7-days-checklist.md)
 
-### W6 · Day 1（周一 · 2h）— 建立边界
+### W5 · Day 1（周一 · 2h）— 建立边界
 
 - 阅读 `first-7-days-checklist.md` D1 部分
 - 决定项目场景：**个人笔记搜索助手**（推荐）
 - 画流程图 + 回答 7 个问题
 
-### W4 · Day 2（周二 · 2h）— 手写 Agent
+### W5 · Day 2（周二 · 2h）— 手写 Agent
 
 - 实现 `agent.py` + `tools.py` + `mock_model.py`
 - 跑通 5 个固定任务
 - **关键**：这一天的代码量决定你理解 Agent 的深度
 
-### W4 · Day 3（周三 · 2h）— 工具设计
+### W5 · Day 3（周三 · 2h）— 工具设计
 
 - 写 2 个 tool card（用 `tool-card-template.md`）
 - 实现工具的参数校验、错误码
 
-### W4 · Day 4（周四 · 2h）— Context Engineering
+### W5 · Day 4（周四 · 2h）— Context Engineering
 
 - 实现 5 层 context builder（`prompts.py`）
 - 跑同任务 2 次，验证 prompt 结构稳定
 
-### W4 · Day 5（周五 · 2h）— 20 条 Eval
+### W5 · Day 5（周五 · 2h）— 20 条 Eval
 
 - 写 20 条 eval cases（10 正常 + 5 边界 + 5 安全）
 - 跑一遍，记录分数
 - 失败归因（这是 Day 7 简历材料）
 
-### W4 · 周末（自由 2-4h）— Day 6 + Day 7
+### W5 · 周末（自由 2-4h）— Day 6 + Day 7
 
 - Day 6：写 README + eval_report + demo_script
 - Day 7：复盘 + 简历 bullet
 
-### 🎯 W4 周日验收
+### 🎯 W5 周日验收
 
 - [ ] 200 行最小 Agent 能跑
 - [ ] 2 个 tool card 完整
@@ -277,7 +277,7 @@ Week 14-15 ━ 阶段 7：求职冲刺
 
 ---
 
-## 📦 阶段 3 · RAG 完整链路（第 5-6 周 · 40h）
+## 📦 阶段 3 · RAG 完整链路（第 6-7 周 · 40h）
 
 > **目标**：端到端 RAG 系统 + FastAPI + Docker
 
@@ -321,7 +321,7 @@ Week 14-15 ━ 阶段 7：求职冲刺
 - 元数据过滤
 - 相似度检索
 
-**练习**：把 W5D2 的 PDF chunks 存入 Chroma，查询能返回 top-k
+**练习**：把 W6D2 的 PDF chunks 存入 Chroma，查询能返回 top-k
 
 ### W6 · Day 5（周五 · 2h）— 端到端 Naive RAG
 
@@ -381,7 +381,7 @@ def rag_query(question: str) -> str:
 
 ---
 
-## 📦 阶段 4 · Agent 框架（第 7-8 周 · 40h）
+## 📦 阶段 4 · Agent 框架（第 8-9 周 · 40h）
 
 > **目标**：用 LangGraph 重写阶段 2 的最小 Agent，掌握生产级 Agent 设计。
 
@@ -477,7 +477,7 @@ def rag_query(question: str) -> str:
 
 ---
 
-## 📦 阶段 5 · 多 Agent + MCP + 工程化（第 9-10 周 · 40h）
+## 📦 阶段 5 · 多 Agent + MCP + 工程化（第 10-11 周 · 40h）
 
 > **目标**：3 Agent 协作 + 自建 MCP server + 性能优化
 
@@ -558,7 +558,7 @@ def rag_query(question: str) -> str:
 
 ---
 
-## 📦 阶段 6 · 简历级项目（第 11-12 周 · 40h）
+## 📦 阶段 6 · 简历级项目（第 12-13 周 · 40h）
 
 > **目标**：2 个简历级项目，每个能 demo、可量化、有技术深度。
 
@@ -640,14 +640,19 @@ def rag_query(question: str) -> str:
 ### 🎯 W13 周日验收
 
 - [ ] 2 个项目上线 demo URL
-- [ ] 每个项目 30 条 eval case
+- [ ] 每个项目 ≥ 30 条 eval case（**用 [`docs/eval-case-template.md`](eval-case-template.md) 模板**），通过率 ≥ 80%，safety 100% 通过
 - [ ] 每个项目 README 完整（架构图、demo、限制）
 - [ ] 2 个 demo 视频已录（3 分钟内）
 - [ ] 代码已 commit + tag v1.0
 
 ---
 
-## 📦 阶段 7 · 求职冲刺（第 13-14 周 · 28h）
+## 📦 阶段 7 · 求职冲刺（第 14-16 周 · 42h）
+
+> **v2 扩展**：从 2 周扩到 3 周。
+> **W14**：项目讲解训练 + 简历 + 投递（每天 2h）
+> **W15**：高频题 + LeetCode Medium + 模拟面试（每天 2h）
+> **W16**：内推冲刺 + 真实面试准备 + 谈薪（每天 2h）
 
 > **目标**：简历打磨 + 投递 + 模拟面试 + Offer
 
@@ -712,8 +717,58 @@ def rag_query(question: str) -> str:
 ### 🎯 W15 周日验收
 
 - [ ] 投递 30+
-- [ ] 模拟面试 3+ 次
+- [ ] 模拟面试 2+ 次
 - [ ] 收到至少 1 个面试邀请（不是目标，但说明方向对）
+- [ ] 30 道高频题能答出 20+
+- [ ] LeetCode Medium 至少 3 题 AC
+
+---
+
+### W16 · 真实面试准备 + 谈薪（4 天 × 2h + 周末验收 = 10h）
+
+#### Day 1（周一）：内推冲刺 + 持续投递
+
+- GitHub 仓库 / 掘金 / 知乎 发"求职动态" + 求内推帖
+- 给目标公司 senior 发 LinkedIn 私信（≥ 10 人）
+- 投递目标 50 个（补 W14 没投的）
+
+#### Day 2（周二）：项目讲解专项 ⭐ 核心
+
+**5 分钟讲清项目 1**（STAR 法则 + 架构图 + 量化指标）：
+- 录视频 → 自己回看 → 卡的地方重录
+- 重点突出 Context Builder / Tool Registry / Eval & Trace
+
+**5 分钟讲清项目 2**：同上，重点突出多 Agent 协作 + HITL 设计
+
+**八大组件逐个讲解**（每组件 1 分钟录音）：
+- Goal / Policy / State / Memory / Context Builder / Tool Registry / Loop Controller / Eval & Trace
+
+#### Day 3（周三）：行业动态 + 公司研究
+
+- 读 [Simon Willison's Weblog](https://simonwillison.net/) 最近 1 周 + [LangChain Blog](https://blog.langchain.com/) 最近 1 月 → `notes/week16/industry.md`
+- 选 3 家目标公司深入研究（技术栈 / 团队 / Agent 产品）→ `notes/week16/companies.md`
+- 准备 5 个反问面试官的高质量问题
+
+#### Day 4（周四）：模拟面试 3 + 谈薪准备
+
+- 模拟面试 3：项目深挖 + 反问 + 谈薪模拟
+- 复盘前 3 次模拟面试的问题分类（系统设计 / 项目细节 / 行为），对弱项加练
+- 谈薪：了解 base + 期权 + RSU 计算，准备期望区间
+
+#### Day 5（周五）：Offer 谈判 + 17 周博客
+
+- 投递 / 面试 / Offer 漏斗复盘
+- Offer 谈判脚本（不卑不亢 / 强调对方优势 / 竞争 Offer 压力）
+- 写《零基础 17 周转行 Agent 工程师》→ 发知乎 / 掘金
+
+### 🎯 W16 周日验收 · 17 周毕业
+
+- [ ] 拿到 ≥ 1 个 Offer **或** ≥ 3 个面试进入终面
+- [ ] 5 分钟项目讲解视频录好
+- [ ] 八大组件录音讲解完成
+- [ ] 公司研究报告 + 反问问题清单完成
+- [ ] 17 周博客发布
+- [ ] GitHub 2 个 star-worthy 仓库
 
 ---
 
@@ -820,7 +875,7 @@ def rag_query(question: str) -> str:
 
 ---
 
-## 📊 15 周进度追踪表
+## 📊 17 周进度追踪表
 
 > 复制到自己的笔记里，每周更新。
 
@@ -830,7 +885,7 @@ def rag_query(question: str) -> str:
 阶段 0      W1     概念笔记 + 环境就绪      ⬜    ___
 阶段 1      W2     6 个练习 + chatbot      ⬜    ___
 阶段 1      W3     weather-llm 项目       ⬜    ___
-阶段 2      W4     最小 Agent + 20 eval    ⬜    ___
+阶段 2      W5     最小 Agent + 20 eval    ⬜    ___
 阶段 3      W6     Naive RAG 跑通          ⬜    ___
 阶段 3      W7     RAG 部署 + RAGAS       ⬜    ___
 阶段 4      W8     LangGraph Agent         ⬜    ___
@@ -896,7 +951,7 @@ def rag_query(question: str) -> str:
 
 ## 🎯 成功的 3 个关键指标
 
-> 14 周结束时自检：
+> 17 周结束时自检：
 
 - [ ] **能讲 2 个项目**：用 5 分钟讲清架构 + 量化指标
 - [ ] **能答 30 道高频题**：不看书不查文档
@@ -909,8 +964,8 @@ def rag_query(question: str) -> str:
 1. **现在**：把 W1 Day 1 的 4 个任务做掉（2h）
 2. **今天结束前**：GitHub 建仓 `agent-learning`，写第一行 README
 3. **本周结束**：完成阶段 0 全部验收
-4. **14 周后**：拿 Offer 🎉
+4. **17 周后**：拿 Offer 🎉
 
 ---
 
-**最后一条**：这份路线偏紧。如果某周压力大，砍掉的是"锦上添花"（可视化、UI 优化），不是"核心产出"（Agent 能跑、RAG 能查）。保持每周有 commit，14 周后回头看，你会感谢自己开始。
+**最后一条**：这份路线偏紧。如果某周压力大，砍掉的是"锦上添花"（可视化、UI 优化），不是"核心产出"（Agent 能跑、RAG 能查）。保持每周有 commit，17 周后回头看，你会感谢自己开始。

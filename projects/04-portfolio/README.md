@@ -1,4 +1,4 @@
-# 🏆 Project 04 · 简历级项目（第 11-12 周）
+# 🏆 Project 04 · 简历级项目（第 12-13 周 · W12-13）
 
 > 这是求职前最关键的产出。**至少完成 2 个**写进简历。
 
@@ -109,7 +109,7 @@ personal-kb-assistant/
 
 ---
 
-## 📅 第 11 周
+## 📅 W12
 
 - [ ] 确定项目组合
 - [ ] 完成项目 1 的 MVP
@@ -118,7 +118,7 @@ personal-kb-assistant/
 
 ---
 
-## 📅 第 12 周
+## 📅 W13
 
 - [ ] 项目 2 的 MVP
 - [ ] 两个项目的 README 完整化
@@ -139,7 +139,7 @@ personal-kb-assistant/
 ### 工程
 - [ ] README 完整（架构图、demo、限制）
 - [ ] Docker 一键启动
-- [ ] 至少 20 条 eval case
+- [ ] **≥ 30 条 eval case**（用 [`docs/eval-case-template.md`](../../docs/eval-case-template.md)），通过率 ≥ 80%，safety 100% 通过
 - [ ] LangSmith / 自建 trace
 
 ### 简历表达（量化）
