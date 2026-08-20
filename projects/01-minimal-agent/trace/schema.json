@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Step Trace",
+  "description": "Agent 单步执行记录的 JSONL schema。每行一个 JSON 对象。",
+  "type": "object",
+  "required": ["step", "action", "observation", "latency_ms", "timestamp"],
+  "properties": {
+    "step": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "步数编号，从 1 开始"
+    },
+    "action": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["tool_call", "final_answer"],
+          "description": "动作类型"
+        },
+        "tool_name": {
+          "type": ["string", "null"],
+          "description": "工具名（仅 tool_call）"
+        },
+        "args": {
+          "type": ["object", "null"],
+          "description": "工具参数（仅 tool_call）"
+        },
+        "answer": {
+          "type": ["string", "null"],
+          "description": "最终答案（仅 final_answer）"
+        },
+        "reason_summary": {
+          "type": "string",
+          "description": "一句话决策理由（用于审计，不存完整 CoT）"
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "required": ["ok"],
+      "properties": {
+        "ok": {"type": "boolean"},
+        "error": {"type": "string"},
+        "hint": {"type": "string"},
+        "retryable": {"type": "boolean"},
+        "message": {"type": "string"},
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {"type": "string"},
+              "title": {"type": "string"},
+              "snippet": {"type": "string"},
+              "score": {"type": "integer"}
+            }
+          }
+        },
+        "count": {"type": "integer"},
+        "path": {"type": "string"},
+        "bytes": {"type": "integer"}
+      }
+    },
+    "latency_ms": {
+      "type": "number",
+      "description": "本步耗时（毫秒）"
+    },
+    "timestamp": {
+      "type": "number",
+      "description": "Unix 时间戳（秒）"
+    },
+    "cost_estimate": {
+      "type": "number",
+      "description": "本步预估成本（美元），可选"
+    }
+  }
+}
