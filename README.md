@@ -77,3 +77,17 @@ python/
 - 🧪 Eval case 模板 → [`docs/eval-case-template.md`](docs/eval-case-template.md)
 - 🛠 第一个项目代码 → [`projects/01-minimal-agent/`](projects/01-minimal-agent/)
 - 🐍 Python 练习场 → [`sandbox/`](sandbox/)
+
+
+
+
+
+
+
+
+
+
+学习资料
+https://py.qizhen.xyz/string
+
+列表和元组
